@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Edmar">
 <meta property="og:description" content="实例代码: 12345class 原料A&amp;#123;...&amp;#125; class 原料B&amp;#123;...&amp;#125;class 产品 &amp;#123;     原料A...&amp;#125;  控制反转(IoC)过程：  传统应用程序：   我们创建产品对象时，需要注入若干原料对象。 我们首先创建若干原料对象和产品对象，然后手动将若干原料对象注入产品对象，得到产品。   IoC容器下：   IoC容器会">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-02T13:10:40.746Z">
+<meta property="og:updated_time" content="2019-04-02T13:19:27.657Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="控制反转(IoC)和依赖注入(DI)">
 <meta name="twitter:description" content="实例代码: 12345class 原料A&amp;#123;...&amp;#125; class 原料B&amp;#123;...&amp;#125;class 产品 &amp;#123;     原料A...&amp;#125;  控制反转(IoC)过程：  传统应用程序：   我们创建产品对象时，需要注入若干原料对象。 我们首先创建若干原料对象和产品对象，然后手动将若干原料对象注入产品对象，得到产品。   IoC容器下：   IoC容器会">
@@ -336,7 +336,7 @@
 </ul>
 <ol>
 <li>IoC容器会代替我们做上述的事情，创建原料和产品对象，并将原料和产品装配。</li>
-<li>我们通过IoC容器的一些方法获取到装配好的产品对象。<br>​    上述过程中，”创建原料和产品对象、查找原料并注入到产品中“，这本来是由我们来控制，而现在交给IoC容器控制，这就是<strong>控制反转</strong>。<br>​    要得到产品对象，我们不需要关注原料和产品对象的创建过程和注入过程，只需要通过容器提供给我们的方法就能获得产品对象。</li>
+<li>我们通过IoC容器的一些方法获取到装配好的产品对象。<br>​    <strong>上述过程中，”创建原料和产品对象、查找原料并注入到产品中“，这本来是由我们来控制，而现在交给IoC容器控制，这就是<span style="border-bottom:2px dashed #abcdef;">控制反转</span>。</strong><br>​    <strong>要得到产品对象，我们不需要关注原料和产品对象的创建过程和注入过程，只需要通过容器提供给我们的方法就能获得产品对象。</strong></li>
 </ol>
 <hr>
 <h2 id="依赖注入-DI-过程："><a href="#依赖注入-DI-过程：" class="headerlink" title="依赖注入(DI)过程："></a>依赖注入(DI)过程：</h2><hr>
