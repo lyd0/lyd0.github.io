@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next muse use-motion" lang="zh-Hans">
+<html class="theme-next mist use-motion" lang="zh-Hans">
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -45,6 +45,44 @@
 
 
 
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Lato:300,300italic,400,400italic,700,700italic|Simple:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
 
 
 
@@ -68,7 +106,7 @@
 
 
 
-  <meta name="keywords" content="Java,">
+  <meta name="keywords" content="Spring,">
 
 
 
@@ -80,14 +118,14 @@
 
 
 <meta name="description" content="实例代码: 12345class 原料A&amp;#123;...&amp;#125; class 原料B&amp;#123;...&amp;#125;class 产品 &amp;#123;     原料A...&amp;#125;  控制反转(IoC)过程：  传统应用程序：   我们创建产品对象时，需要注入若干原料对象。 我们首先创建若干原料对象和产品对象，然后手动将若干原料对象注入产品对象，得到产品。   IoC容器下：   IoC容器会">
-<meta name="keywords" content="Java">
+<meta name="keywords" content="Spring">
 <meta property="og:type" content="article">
 <meta property="og:title" content="控制反转(IoC)和依赖注入(DI)">
 <meta property="og:url" content="http://edmar.cn/2019/04/02/IoC&DI/index.html">
 <meta property="og:site_name" content="Edmar">
 <meta property="og:description" content="实例代码: 12345class 原料A&amp;#123;...&amp;#125; class 原料B&amp;#123;...&amp;#125;class 产品 &amp;#123;     原料A...&amp;#125;  控制反转(IoC)过程：  传统应用程序：   我们创建产品对象时，需要注入若干原料对象。 我们首先创建若干原料对象和产品对象，然后手动将若干原料对象注入产品对象，得到产品。   IoC容器下：   IoC容器会">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-02T13:21:25.778Z">
+<meta property="og:updated_time" content="2019-04-02T13:39:52.275Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="控制反转(IoC)和依赖注入(DI)">
 <meta name="twitter:description" content="实例代码: 12345class 原料A&amp;#123;...&amp;#125; class 原料B&amp;#123;...&amp;#125;class 产品 &amp;#123;     原料A...&amp;#125;  控制反转(IoC)过程：  传统应用程序：   我们创建产品对象时，需要注入若干原料对象。 我们首先创建若干原料对象和产品对象，然后手动将若干原料对象注入产品对象，得到产品。   IoC容器下：   IoC容器会">
@@ -98,7 +136,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Muse',
+    scheme: 'Mist',
     version: '5.1.4',
     sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
     fancybox: true,
@@ -125,7 +163,22 @@
 
 
 
-
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<style>
+    .pace .pace-progress {
+        background: #1E92FB; /*进度条颜色*/
+        background: linear-gradient(to right,#abcdef,pink,yellow,#abcdef, #1E92FB,orange ,yellow,#abcdef,orange);
+        height: 3px;
+    }
+    .pace .pace-progress-inner {
+         box-shadow: 5px 0px 10px orange; /*阴影颜色 #1E92FB*/
+    }
+    .pace .pace-activity {
+        border-top-color: gray;    /*上边框颜色*/
+        border-left-color: gray;    /*左边框颜色*/
+    }
+</style>
   <title>控制反转(IoC)和依赖注入(DI) | Edmar</title>
   
 
@@ -258,7 +311,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="lyd0">
       <meta itemprop="description" content>
-      <meta itemprop="image" content="https://i.loli.net/2019/04/02/5ca362573a7d5.jpeg">
+      <meta itemprop="image" content="/images/head.JPG">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -303,6 +356,37 @@
 
           
 
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  428
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1
+                </span>
+              
+            </div>
           
 
           
@@ -366,12 +450,30 @@
     
 
     
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    lyd0
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://edmar.cn/2019/04/02/IoC&DI/" title="控制反转(IoC)和依赖注入(DI)">http://edmar.cn/2019/04/02/IoC&DI/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
 
     <footer class="post-footer">
       
         <div class="post-tags">
           
-            <a href="/tags/Java/" rel="tag"># Java</a>
+            <a href="/tags/Spring/" rel="tag"># Spring</a>
           
         </div>
       
@@ -380,6 +482,22 @@
       
       
 
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/04/03/Sping中的一些工具类/" rel="prev" title="Sping中的一些工具类">
+                Sping中的一些工具类 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
       
 
       
@@ -442,7 +560,7 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image" src="https://i.loli.net/2019/04/02/5ca362573a7d5.jpeg" alt="lyd0">
+              <img class="site-author-image" itemprop="image" src="/images/head.JPG" alt="lyd0">
             
               <p class="site-author-name" itemprop="name">lyd0</p>
               <p class="site-description motion-element" itemprop="description"></p>
@@ -455,7 +573,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -467,10 +585,10 @@
               
               
               <div class="site-state-item site-state-tags">
-                
+                <a href="/tags/index.html">
                   <span class="site-state-item-count">1</span>
                   <span class="site-state-item-name">标签</span>
-                
+                </a>
               </div>
             
 
@@ -528,6 +646,15 @@
   <span class="author" itemprop="copyrightHolder">lyd0</span>
 
   
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">485</span>
+  
 </div>
 
 
@@ -539,7 +666,7 @@
 
 
 
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
 
 
 
